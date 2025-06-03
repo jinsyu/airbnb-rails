@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem 'devise', '~> 4.9', '>= 4.9.4'
+gem "devise", "~> 4.9", ">= 4.9.4"
 
 gem "rails", "~> 8.0.2"
 gem "propshaft"
@@ -36,4 +36,10 @@ end
 
 group :development do
   gem "web-console"
+  gem "rubocop", require: false
+  gem "rubocop-rails", require: false
+  gem "rubocop-rspec", require: false
+  gem "solargraph", require: false
+  gem "ruby-lsp", require: false
+  gem "htmlbeautifier", require: false
 end
