@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
+gem "faker"
+
 gem "devise", "~> 4.9", ">= 4.9.4"
 
 gem "rails", "~> 8.0.2"
