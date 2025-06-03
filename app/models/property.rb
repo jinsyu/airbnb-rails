@@ -9,4 +9,6 @@ class Property < ApplicationRecord
     validates :country, presence: true
 
     monetize :price_cents, as: :price
+
+    has_many_attached :images
 end
