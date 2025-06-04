@@ -11,4 +11,6 @@ class Property < ApplicationRecord
     monetize :price_cents, as: :price
 
     has_many_attached :images
+
+    has_many :reviews, dependent: :destroy
 end
