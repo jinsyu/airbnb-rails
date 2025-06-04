@@ -3,7 +3,26 @@
     <div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
       <% @properties.each do |property| %>
         <div class="group relative cursor-pointer">
-          <%= image_tag property.images.first, class: "aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-75" %>
+          <!-- Slider main container -->
+          <div class="swiper aspect-square w-full rounded-md bg-gray-200 object-cover">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <% property.images.each do |image| %>
+                <div class="swiper-slide">
+                  <%= image_tag image, class: "aspect-square w-full rounded-md bg-gray-200 object-cover" %>
+                </div>
+              <% end %>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+
+
           <div class="mt-2 space-y-0.5">
             <p class="text-sm text-gray-800 font-medium"><%= property.name %></p>
             <p class="text-xs text-gray-500">5월 29일~31일</p>

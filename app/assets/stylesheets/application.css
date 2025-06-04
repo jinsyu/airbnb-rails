@@ -8,3 +8,64 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+
+ .swiper {
+    width: 100%;
+    aspect-ratio: 1/1;
+ }
+ 
+ .swiper:hover {
+    .swiper-button-prev {
+        display: block!important;
+    }
+
+    .swiper-button-next {
+        display: block!important;
+    }
+ }
+
+ .swiper-button-prev {
+    display: none!important;
+    width: 28px!important;
+    height: 28px!important;
+    background-color: white;
+    opacity: 0.5;
+    background-image: url("prev.svg") !important;
+    border-radius: 50%;
+    border-width: 4px;
+    border-color: #fff;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+ }
+
+ .swiper-button-prev::after {
+    content: ""!important;
+ }
+
+ .swiper-button-next {
+    display: none!important;
+    width: 28px!important;
+    height: 28px!important;
+    opacity: 0.5;
+    background-color: #fff!important;
+    background-image: url("next.svg") !important;
+    border-radius: 50%!important;
+    border-width: 4px;
+    border-color: #fff;
+ }
+
+ .swiper-button-next::after {
+    content: ""!important;
+ }
+
+ .swiper-pagination-bullet {
+    background: #fff!important;
+    opacity: 0.5!important;
+ }
+
+ .swiper-pagination-bullet-active {
+    background: #fff!important;
+    opacity: 1!important;
+ }
