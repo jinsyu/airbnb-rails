@@ -5,8 +5,14 @@ export default class extends Controller {
   // static targets = ["openUserMenu", "dropdown", "openMobileMenu", "mobileMenu"]
 
   udpatewishliststatus() {
-    const status = this.element.dataset.status
+    // get status if user is logged in
+    // if logged-out reirect to login page
+    if (this.element.dataset.userLoggedIn === "false") {
+      window.location.href = "/users/sign_in"
+      return;
+    }
 
+    const status = this.element.dataset.status
     if (status === "false") {
       this.element.classList.add("fill-primary")
       this.element.classList.remove("fill-none")
